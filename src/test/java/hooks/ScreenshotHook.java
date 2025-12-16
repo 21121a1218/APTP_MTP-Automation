@@ -12,7 +12,7 @@ public class ScreenshotHook {
 
     @After
     public void addScreenshotAfterScenario(Scenario scenario) {
-        /*try {
+        try {
             WebDriver driver = BaseTest.getDriver();
 
             if (driver != null) {
@@ -28,6 +28,6 @@ public class ScreenshotHook {
         } catch (Exception e) {
             // do nothing – screenshot failure should not fail scenario
             e.printStackTrace();
-        }*/
+        }
     }
 }

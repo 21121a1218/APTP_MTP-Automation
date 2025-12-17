@@ -12,12 +12,6 @@ import java.time.Duration;
 public class LoginPage {
     WebDriver driver;
     WebDriverWait wait;
-
-      public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        PageFactory.initElements(driver, this);
-    }
     
 
     @FindBy(xpath = "//input[@placeholder='0000000000']") WebElement mobileNumberInput;
@@ -34,7 +28,11 @@ public class LoginPage {
     
     @FindBy(xpath="//p[@class='text-light remainingTime']") WebElement countdown;
 
-  
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        PageFactory.initElements(driver, this);
+    }
 
     public void enterMobileNumber(String number) {
         WebElement input = wait.until(ExpectedConditions.visibilityOf(mobileNumberInput));
@@ -43,11 +41,9 @@ public class LoginPage {
     }
 
     public void clickSendOtp() {
-    WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(sendOtpButton));
-    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btn);
-    btn.click();
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(sendOtpButton));
+        button.click();
     }
-
 
     public void enterOtp(String otp) {
         WebElement otpBox = wait.until(ExpectedConditions.visibilityOf(otpInput));

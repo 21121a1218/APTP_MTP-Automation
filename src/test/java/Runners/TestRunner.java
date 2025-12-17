@@ -7,8 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {
-                /*"src/test/resources/Features/accountsummarypage.feature",
-               "src/test/resources/Features/cartpage.feature",
+                "src/test/resources/Features/accountsummarypage.feature",
+               /*"src/test/resources/Features/cartpage.feature",
                 "src/test/resources/Features/creditpage.feature",
                 "src/test/resources/Features/favorites.feature",
                 "src/test/resources/Features/featuresandbenfits.feature",
@@ -19,8 +19,8 @@ import io.cucumber.testng.CucumberOptions;
                 "src/test/resources/Features/orderhistorypage.feature",
                 "src/test/resources/Features/PaymentHistory.feature",
                 "src/test/resources/Features/PLPOrder.feature",
-                "src/test/resources/Features/Resendotp.feature",*/
-                "src/test/resources/Features/Search.feature"
+                "src/test/resources/Features/Resendotp.feature",
+                "src/test/resources/Features/Search.feature"*/
         },
         glue = {
                 "StepDefnitions",

@@ -12,7 +12,7 @@ public class BaseTest {
         if (driver.get() == null) {   // prevents multiple browsers
 
             ChromeOptions options = new ChromeOptions();
-
+            /*
             // ---- CI / GitHub Actions REQUIRED OPTIONS ----
             options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
@@ -20,7 +20,7 @@ public class BaseTest {
             options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080");
             // ------------------------------------------------
-
+             */
             WebDriver drv = new ChromeDriver(options);
             drv.manage().window().maximize(); // kept as-is
             driver.set(drv);

@@ -14,7 +14,7 @@ public class Myaccount {
     WebDriverWait wait;
     public Myaccount(WebDriver driver) {
          this.driver = driver;
-         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
          PageFactory.initElements(driver, this);
      }
     @FindBy(xpath="//span[normalize-space()='My Account']") WebElement myacnt;

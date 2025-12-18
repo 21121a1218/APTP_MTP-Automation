@@ -28,8 +28,10 @@ public class LoginSteps extends BaseTest {
     }
 
     @Then("I can see the homepage")
-    public void i_can_see_the_homepage() {
+    public void i_can_see_the_homepage() throws InterruptedException {
+    	Thread.sleep(2000);
         String currentUrl = getDriver().getCurrentUrl();
+        System.out.println(currentUrl);
         Assert.assertTrue(currentUrl.contains("goodyear.com"), "Homepage not displayed!");
         tearDown();
     }

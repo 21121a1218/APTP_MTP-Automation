@@ -19,8 +19,8 @@ import io.cucumber.testng.CucumberOptions;
                 "src/test/resources/Features/orderhistorypage.feature",
                 "src/test/resources/Features/PaymentHistory.feature",
                 "src/test/resources/Features/PLPOrder.feature",
-                "src/test/resources/Features/Resendotp.feature",
-                "src/test/resources/Features/Search.feature"*/
+                "src/test/resources/Features/Resendotp.feature",*/
+                "src/test/resources/Features/Search.feature"
         },
         glue = {
                 "StepDefnitions",
